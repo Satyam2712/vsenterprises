@@ -1,0 +1,12 @@
+Equipments
+1.  6
+2.  5
+3.  1
+
+
+to be displayed
+Pf no
+esic
+pan
+gst
+
