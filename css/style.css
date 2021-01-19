@@ -672,3 +672,6 @@ margin-bottom:20px;
     background-color: #f6f6f6;
     /* align-content: center ; */
 }
+.error_msg{
+  color: red;
+}
