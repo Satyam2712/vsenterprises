@@ -59,7 +59,7 @@ emailjs.init("user_XyDlvrzfhHDykU2ml49uy");
      <nav class="navbar navbar-default navbar-fixed-top">
        <div class="container">
  
-         <div class="col-lg-3 col-lg-offset-10 col-md-3 col-md-offset-10 col-sm-4 col-sm-offset-8 col-xs-12 col-xs-offset-8 borderright">
+         <div class="col-lg-3 col-lg-offset-10 col-md-3 col-md-offset-10 col-sm-4 col-sm-offset-8 col-xs-10 col-xs-offset-6 borderright">
            <ul class="header-social-icon">
              <li class="hfb"><a href="#"><i class="fa fa1 fa-facebook"></i></a></li>
              <li class="htw"><a href="#"><i class="fa fa1 fa-twitter"></i></a></li>
@@ -107,70 +107,9 @@ emailjs.init("user_XyDlvrzfhHDykU2ml49uy");
    <!-- End Header -->
 
  
-  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>      
+  <!-- <script src="https://code.jquery.com/jquery-1.9.1.js"></script> -->
+<!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>       -->
 
-<!-- <script>
-$.noConflict();
-jQuery( document ).ready(function( $ ) {
-
-
-
-    // Setup form validation on the #register-form element
-    $("#contact_form").validate({
-    
-        // Specify the validation rules
-        rules: {
-           
-            coname: "required",
-             coemail: {
-             required:true,
-             email:true,
-             },
-              comobile: {
-             required:true,
-             number:true,
-             },
-               comessage: "required",
-            
-
-},
-       
-        // Specify the validation error messages
-        messages: {
-          /* UName: "Please enter your name",
-            gender: "Please specify your gender",
-            address: "Please enter your address",
-            Email: "Please enter a valid email address",
-            date: "Please enter the date of birth",*/
-           
-        },
-        
-        highlight: function(element, errorClass) {
-
-$(element).removeClass("valid").removeClass("error").addClass("error");
-        },
-        unhighlight: function(element, errorClass) {
-          $(element).addClass("valid").removeClass("error");
-        },
-        errorElement: 'span',
-        errorClass: 'inerror',
-        
-        errorPlacement: function(error, element) {
-            if(element.parent('.input-group').length) {
-                error.insertAfter(element.parent());
-            } else {
-                error.insertAfter(element);
-            }
-        },
-        
-        submitHandler: function(form) {
-            form.submit();
-        }
-    });
-    
-  });
-  </script> -->
     <div class="w100 pt30">
   <img class="w100 img-bor" src="admin/page-banner/contact-us.jpg" style="object-fit: cover;" />
       
@@ -195,33 +134,50 @@ $(element).removeClass("valid").removeClass("error").addClass("error");
           <p class="wow animate__animated animate__fadeIn" data-wow-delay="300ms"><b>Regd. Office : </b> Shree Mahalaxmi Store, Nr. Naresh Auto Garage, Behind Poonam Auto Service, S. T. Road, Chembur, Mumbai – 400 071.</p>
           <p class="wow animate__animated animate__fadeIn" data-wow-delay="300ms"><b>Office Telephone No. : </b>  022 – 25275477</p>
 		      <p class="wow animate__animated animate__fadeIn" data-wow-delay="300ms"><b>Mobile No. : </b> (+ 91) 9819782111 / 9819782122</p>
-		      <p class="wow animate__animated animate__fadeIn" data-wow-delay="300ms"><b>Contact Person : </b> VISHANT N. MORE / VISHAL TUPSUNDER</p>
-          <p class="wow animate__animated animate__fadeIn" data-wow-delay="300ms"><b>E-mail : </b> info@vsenterprises.in</p>
+		      <p class="wow animate__animated animate__fadeIn" data-wow-delay="300ms"><b>Contact Person : </b> VISHANT N. MORE</p>
+          <p class="wow animate__animated animate__fadeIn" data-wow-delay="300ms"><b>E-mail : </b> Vs.Enterprise1988@gmail.com</p>
           <p class="wow animate__animated animate__fadeIn" data-wow-delay="300ms"><b>Pan No. (Income Tax) : </b> AOWPM0670C</p>
           <p class="wow animate__animated animate__fadeIn" data-wow-delay="300ms"><b>Service Tax No. : </b> AOWPM0670C SD001</p>
        </div>
        
+       
        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pt30  pt32">
-               <form id="contact-form" action="#myModal">
+        <!-- <div class="col-lg-1 col-md-1 col-sm-2 col-xs-12">
+          <p class="wow animate__animated animate__zoomIn" data-wow-delay="400ms"><img src="images/form_icon.png" class="img-responsive w58" /></p>
+        </div> -->
+        <div class="panel  panel-info">
+          <div class="panel-heading"><h3 class="title-h3 ht wow animate__animated animate__zoomIn" data-wow-delay="200ms" style="text-align: center;">Enquiry Form</h3></div>
+          <div class="panel-body">
+          
+         
+               <form id="contact-form" action="contact.html">
               <div class="form-group wow animate__animated animate__fadeIn" data-wow-delay="400ms">
                 <label for="Name">Name</label>
                 <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                <span id="nameErrorMsg" class="error_msg"></span>
+                
               </div>
               <div class="form-group wow animate__animated animate__fadeIn" data-wow-delay="400ms">
                 <label for="Email">Email</label>
                 <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                <span id="emailErrorMsg" class="error_msg"></span>
               </div>
               <div class="form-group wow animate__animated animate__fadeIn" data-wow-delay="400ms">
                 <label for="Phone">Phone Number</label>
                 <input type="text" class="form-control" name="mobile" id="mobile" placeholder="Phone Number">
+                <span id="mobileErrorMsg" class="error_msg"></span>
               </div>
               <div class="form-group wow animate__animated animate__fadeIn" data-wow-delay="400ms">
                 <label for="Message">Message</label>
                 <textarea class="form-control" name="message" id="message" placeholder="Message"></textarea>
+                <span id="messageErrorMsg" class="error_msg"></span>
               </div>
-              
-              <button name="submit" onclick='sendMail()' class="btn btn-primary wow animate__animated animate__fadeIn" data-wow-delay="400ms">Submit</button>
+              <a href="" class="btn btn-block btn-info wow animate__animated animate__fadeIn" data-wow-delay="400ms"  onclick="return sendMail()">Submit</a>
+               <!-- <a href="#" class="btn btn-block btn-success" type="reset"><button type="reset" class="btn-success">Reset</button></a> -->
+              <!-- <button name="submit" onclick="return sendMail()" class="btn btn-primary wow animate__animated animate__fadeIn" data-wow-delay="400ms" style="align-items: center;">Submit</button> -->
             </form>
+          </div>
+        </div>
          </div>
        </div>
         </div>  
@@ -306,7 +262,7 @@ $(element).removeClass("valid").removeClass("error").addClass("error");
     <li>Shree Mahalaxmi Store, Nr. Naresh Auto Garage, Behind Poonam Auto Service, S. T. Road, Chembur, Mumbai – 400 071.</li>
         <li><i class="fa fa-phone foot-i"></i><span class="pleft12"> 022 – 25275477</span></li>
     <li><i class="fa fa-mobile-phone foot-i"></i><span class="pleft12">&nbsp (+ 91) –9819782111 / 9819782122</span></li>
-          <li><!--<i class="flaticon-new100 foot-i"></i>--><img src="images/msg.png"  /><span class="pleft12"><a href="mailto: info@vsenterprises.in"> info@vsenterprises.in</a></span></li>          
+          <li><!--<i class="flaticon-new100 foot-i"></i>--><img src="images/msg.png"  /><span class="pleft12"><a href="mailto: Vs.Enterprise1988@gmail.com"> Vs.Enterprise1988@gmail.com</a></span></li>          
         <!--  <li><i class="material-icons foot-i" style="color:red">email</i><span class="pleft12"><a href="mailto: info@vsenterprises.in"> info@vsenterprises.in</a></span></li> -->         
         </ul>
         <ul class="foot-social-icon">
